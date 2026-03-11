@@ -44,7 +44,7 @@ export default function Navbar() {
                                 <Heart className="h-5 w-5 text-white fill-white" />
                             </div>
                             <span className="font-extrabold text-2xl tracking-tight text-slate-900">
-                                Miami Animal Clinic
+                                DD's MaxxPet
                             </span>
                         </Link>
                     </div>

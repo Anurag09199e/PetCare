@@ -154,7 +154,7 @@ export default function ServicePage() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">You May Also Need</h2>
-                            <p className="text-lg text-slate-600">Explore other healthcare services we provide at Miami Animal Clinic.</p>
+                            <p className="text-lg text-slate-600">Explore other healthcare services we provide at DD's MaxxPet.</p>
                         </div>
                         <Link href="/" className="text-teal-600 font-bold hover:text-teal-700 transition-colors">View All Services →</Link>
                     </div>

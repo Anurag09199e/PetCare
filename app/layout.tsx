@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PetAids - Emergency Pet Care",
-  description: "Modern emergency pet care and ambulance booking platform.",
+  title: "DD's MaxxPet - Trusted Veterinary Care",
+  description: "Modern veterinary care and specialized pet services at DD's MaxxPet.",
 };
 
 export default function RootLayout({

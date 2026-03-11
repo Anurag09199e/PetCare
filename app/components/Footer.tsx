@@ -13,7 +13,7 @@ export default function Footer() {
                                 <Heart className="h-5 w-5 text-white fill-white" />
                             </div>
                             <span className="font-extrabold text-2xl tracking-tight text-white group-hover:text-teal-400 transition-colors">
-                                Miami Animal Clinic
+                                DD's MaxxPet
                             </span>
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed mb-8">
@@ -65,7 +65,7 @@ export default function Footer() {
                             </li>
                             <li className="flex items-center gap-3 text-sm text-slate-400">
                                 <Mail className="w-5 h-5 text-teal-500 shrink-0" />
-                                <span>hello@Miami Animal Clinic.com</span>
+                                <span>hello@maxxpet.com</span>
                             </li>
                         </ul>
                         <div className="mt-6 p-4 rounded-xl bg-slate-800 border border-slate-700">
@@ -77,7 +77,7 @@ export default function Footer() {
 
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-sm font-medium">
-                        &copy; {new Date().getFullYear()} Miami Animal Clinic Veterinary Clinic. All rights reserved.
+                        &copy; {new Date().getFullYear()} DD's MaxxPet. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="text-sm font-medium text-slate-500 hover:text-white transition-colors">Privacy</Link>

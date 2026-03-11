@@ -93,7 +93,7 @@ export default function Home() {
               <h1 className="text-5xl md:text-8xl font-black tracking-tight leading-[0.9]">
                 Welcome To <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-300 to-emerald-300">
-                  Miami Animal Clinic
+                  DD's MaxxPet
                 </span>
               </h1>
               <p className="text-lg md:text-2xl text-blue-100/80 max-w-2xl mx-auto font-medium">
@@ -316,7 +316,7 @@ export default function Home() {
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-slate-900 mb-1">Miami Animal Clinic</h4>
+                      <h4 className="font-bold text-slate-900 mb-1">DD's MaxxPet</h4>
                       <p className="text-slate-600 text-sm mb-2">7337 SW 8th St<br />Miami, FL 33144</p>
                       <a href="#" className="text-sm font-bold text-teal-600 hover:text-teal-800 transition-colors">Get Directions →</a>
                     </div>
