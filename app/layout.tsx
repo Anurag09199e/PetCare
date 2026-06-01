@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DD's MaxxPet - Trusted Veterinary Care",
-  description: "Modern veterinary care and specialized pet services at DD's MaxxPet.",
+  title: "Dr. Ajay Sood Dog & Cat Clinic - Trusted Veterinary Care",
+  description: "Modern veterinary care and specialized pet services at Dr. Ajay Sood Dog & Cat Clinic.",
 };
 
 export default function RootLayout({

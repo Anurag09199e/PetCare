@@ -13,10 +13,10 @@ const links = [
         href: "#services",
         label: "Services",
         dropdown: [
-            { href: "/services/wellness-exams", label: "Wellness Exams" },
+            { href: "/services/wellness", label: "Wellness" },
             { href: "/services/vaccinations", label: "Vaccinations" },
             { href: "/services/dental-care", label: "Dental Care" },
-            { href: "/services/grooming-spa", label: "Grooming & Spa" },
+            { href: "/services/grooming", label: "Grooming" },
             { href: "/services/diagnostics", label: "Diagnostics" },
             { href: "/services/surgery", label: "Surgery" },
         ]
@@ -45,20 +45,20 @@ export default function Navbar() {
             className={cn(
                 "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
                 scrolled
-                    ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-200 py-3"
-                    : "bg-transparent py-5"
+                    ? "bg-slate-900/95 backdrop-blur-md shadow-xl border-b border-slate-800 py-3"
+                    : "bg-slate-900 py-4 border-b border-slate-800/50"
             )}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-12">
                     {/* Logo */}
                     <div className="flex-shrink-0 flex items-center">
-                        <Link href="/" className="flex items-center gap-2">
-                            <div className="bg-teal-600 p-2 rounded-xl flex items-center justify-center">
-                                <Heart className="h-5 w-5 text-white fill-white" />
+                        <Link href="/" className="flex items-center gap-2 group">
+                            <div className="bg-teal-500 p-2 rounded-xl flex items-center justify-center group-hover:bg-teal-400 transition-colors shadow-lg shadow-teal-500/20">
+                                <Heart className="h-5 w-5 text-slate-900 fill-slate-900" />
                             </div>
-                            <span className="font-extrabold text-2xl tracking-tight text-slate-900">
-                                DD's MaxxPet
+                            <span className="font-extrabold text-2xl tracking-tight text-white">
+                                Dr. Ajay Sood Dog & Cat Clinic
                             </span>
                         </Link>
                     </div>
@@ -80,8 +80,8 @@ export default function Navbar() {
                                         <Link
                                             href={link.href}
                                             className={cn(
-                                                "text-sm font-semibold transition-colors hover:text-teal-600 px-3 py-2 rounded-full flex items-center gap-1",
-                                                isActive ? "text-teal-600 bg-teal-50" : "text-slate-600"
+                                                "text-sm font-semibold transition-colors px-3 py-2 rounded-full flex items-center gap-1",
+                                                isActive ? "text-teal-400 bg-slate-800" : "text-slate-300 hover:text-teal-400 hover:bg-slate-800/50"
                                             )}
                                         >
                                             {link.label}
@@ -91,33 +91,36 @@ export default function Navbar() {
                                         {/* Dropdown Menu */}
                                         <AnimatePresence>
                                             {hasDropdown && hoveredLink === link.label && (
-                                                <motion.div
-                                                    initial={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                                                    exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                                                    transition={{ duration: 0.2 }}
-                                                    className="absolute left-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-100 overflow-hidden py-2"
-                                                >
-                                                    {link.dropdown?.map((sub) => (
-                                                        <Link
-                                                            key={sub.href}
-                                                            href={sub.href}
-                                                            className="block px-4 py-2.5 text-sm font-medium text-slate-600 hover:bg-teal-50 hover:text-teal-600 transition-colors"
-                                                        >
-                                                            {sub.label}
-                                                        </Link>
-                                                    ))}
-                                                </motion.div>
+                                                <div style={{ perspective: "1000px" }} className="absolute left-0 mt-2 pt-2 z-50">
+                                                    <motion.div
+                                                        initial={{ opacity: 0, rotateX: -30, y: -20, scale: 0.9 }}
+                                                        animate={{ opacity: 1, rotateX: 0, y: 0, scale: 1 }}
+                                                        exit={{ opacity: 0, rotateX: -30, y: -20, scale: 0.9 }}
+                                                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                                                        style={{ transformOrigin: "top" }}
+                                                        className="w-56 bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 overflow-hidden py-2"
+                                                    >
+                                                        {link.dropdown?.map((sub) => (
+                                                            <Link
+                                                                key={sub.href}
+                                                                href={sub.href}
+                                                                className="block px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-700 hover:text-teal-400 transition-colors"
+                                                            >
+                                                                {sub.label}
+                                                            </Link>
+                                                        ))}
+                                                    </motion.div>
+                                                </div>
                                             )}
                                         </AnimatePresence>
                                     </div>
                                 );
                             })}
                         </div>
-                        <div className="flex items-center space-x-4 pl-6 border-l border-slate-200">
+                        <div className="flex items-center space-x-4 pl-6 border-l border-slate-700">
                             <Link
                                 href="/book"
-                                className="text-sm font-bold bg-teal-600 text-white px-6 py-2.5 rounded-full hover:bg-teal-700 transition-colors flex items-center gap-2 shadow-sm"
+                                className="text-sm font-bold bg-teal-500 text-slate-900 px-6 py-2.5 rounded-full hover:bg-teal-400 transition-colors flex items-center gap-2 shadow-lg shadow-teal-500/20"
                             >
                                 <Calendar className="w-4 h-4" /> Book Appointment
                             </Link>
@@ -128,7 +131,7 @@ export default function Navbar() {
                     <div className="flex items-center md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="text-slate-900 hover:text-teal-600 p-2 focus:outline-none"
+                            className="text-slate-300 hover:text-teal-400 p-2 focus:outline-none"
                         >
                             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
                         </button>
@@ -143,7 +146,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden absolute top-full left-0 right-0 bg-white border-b border-slate-100 shadow-md overflow-hidden"
+                        className="md:hidden absolute top-full left-0 right-0 bg-slate-900 border-b border-slate-800 shadow-2xl overflow-hidden"
                     >
                         <div className="px-4 pt-4 pb-6 space-y-2">
                             {links.map((link) => {
@@ -160,8 +163,8 @@ export default function Navbar() {
                                                 className={cn(
                                                     "block px-4 py-3 rounded-xl text-base font-semibold transition-colors flex-grow",
                                                     isActive
-                                                        ? "bg-teal-50 text-teal-600"
-                                                        : "text-slate-700 hover:bg-slate-50 hover:text-teal-600"
+                                                        ? "bg-slate-800 text-teal-400"
+                                                        : "text-slate-300 hover:bg-slate-800 hover:text-teal-400"
                                                 )}
                                             >
                                                 {link.label}
@@ -190,7 +193,7 @@ export default function Navbar() {
                                                             key={sub.href}
                                                             href={sub.href}
                                                             onClick={() => setIsOpen(false)}
-                                                            className="block px-4 py-2.5 text-sm font-medium text-slate-500 hover:text-teal-600"
+                                                            className="block px-4 py-2.5 text-sm font-medium text-slate-400 hover:text-teal-400"
                                                         >
                                                             {sub.label}
                                                         </Link>
@@ -201,11 +204,11 @@ export default function Navbar() {
                                     </div>
                                 );
                             })}
-                            <div className="mt-6 pt-6 border-t border-slate-100 flex flex-col px-2">
+                            <div className="mt-6 pt-6 border-t border-slate-800 flex flex-col px-2">
                                 <Link
                                     href="/book"
                                     onClick={() => setIsOpen(false)}
-                                    className="flex items-center justify-center gap-2 w-full bg-teal-600 text-white font-bold py-3.5 rounded-full shadow-sm"
+                                    className="flex items-center justify-center gap-2 w-full bg-teal-500 text-slate-900 font-bold py-3.5 rounded-full shadow-lg shadow-teal-500/20"
                                 >
                                     <Calendar className="w-5 h-5" /> Book Appointment
                                 </Link>

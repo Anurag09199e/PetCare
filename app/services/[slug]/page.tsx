@@ -16,7 +16,7 @@ import CTASection from "@/app/components/CTASection";
 // Mock database for services
 const SERVICES_DATA: Record<string, any> = {
     "wellness-exams": {
-        title: "Wellness Exams",
+        title: "Wellness ",
         description: "Comprehensive physical checkups to ensure your pet's long-term health and catch issues early.",
         icon: Stethoscope,
         content: "Our wellness exams are the cornerstone of preventative care. We perform a nose-to-tail evaluation to monitor your pet's overall health, including weight, dental health, joint function, and internal organ performance.",
@@ -154,7 +154,7 @@ export default function ServicePage() {
                     <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
                         <div>
                             <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">You May Also Need</h2>
-                            <p className="text-lg text-slate-600">Explore other healthcare services we provide at DD's MaxxPet.</p>
+                            <p className="text-lg text-slate-600">Explore other healthcare services we provide at Dr. Ajay Sood Dog & Cat Clinic.</p>
                         </div>
                         <Link href="/" className="text-teal-600 font-bold hover:text-teal-700 transition-colors">View All Services →</Link>
                     </div>

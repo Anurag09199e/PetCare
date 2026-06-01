@@ -13,7 +13,7 @@ export default function Footer() {
                                 <Heart className="h-5 w-5 text-white fill-white" />
                             </div>
                             <span className="font-extrabold text-2xl tracking-tight text-white group-hover:text-teal-400 transition-colors">
-                                DD's MaxxPet
+                                Dr. Ajay Sood Dog & Cat Clinic
                             </span>
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed mb-8">
@@ -77,7 +77,7 @@ export default function Footer() {
 
                 <div className="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-slate-500 text-sm font-medium">
-                        &copy; {new Date().getFullYear()} DD's MaxxPet. All rights reserved.
+                        &copy; {new Date().getFullYear()} Dr. Ajay Sood Dog & Cat Clinic. All rights reserved.
                     </p>
                     <div className="flex gap-6">
                         <Link href="/privacy" className="text-sm font-medium text-slate-500 hover:text-white transition-colors">Privacy</Link>
